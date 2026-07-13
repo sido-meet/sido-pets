@@ -1,0 +1,32 @@
+# Codex runtime artifacts — never upload
+.codex/.cache/
+.codex/.tmp/
+.codex/sqlite/
+.codex/.sandbox-bin/
+
+# Genesis / worktrees — generation scratch, contains absolute Windows paths
+Documents/Codex/*/work/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
+*~
+
+# Python (in case scripts are added later)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.env
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Anything obviously thrown in by accident
+*.tmp
+*.log
