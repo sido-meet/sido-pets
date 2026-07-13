@@ -2,5 +2,6 @@
   "id": "brick-lion",
   "displayName": "Brick Lion",
   "description": "A tiny purple-hatted block-brick lion companion based on the user three-view reference.",
+  "spriteVersionNumber": 2,
   "spritesheetPath": "spritesheet.webp"
 }
