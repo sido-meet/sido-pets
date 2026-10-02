@@ -1,4 +1,4 @@
-# Agent Pets
+# SIDO Pets
 
 Mascots that mirror the working state of AI coding agents — sync them across machines like dotfiles.
 
@@ -7,20 +7,20 @@ Each pet is a PNG/WebP sprite sheet whose frames map to an agent's lifecycle sta
 ## Install
 
 ```bash
-git clone git@github.com:sido-meet/agent-pets.git
+git clone git@github.com:sido-meet/sido-pets.git
 ```
 
 Copy into the Codex load directory (default `~/.codex/pets/`):
 
 ```bash
 mkdir -p ~/.codex/pets
-cp -R agent-pets/pets/* ~/.codex/pets/
+cp -R sido-pets/pets/* ~/.codex/pets/
 ```
 
 Or symlink so the repo stays the source of truth:
 
 ```bash
-ln -s "$(pwd)/agent-pets/pets" ~/.codex/pets
+ln -s "$(pwd)/sido-pets/pets" ~/.codex/pets
 ```
 
 The pet loader resolves `${CODEX_HOME:-$HOME/.codex}/pets/` — see the [hatch-pet contract](https://github.com/openai/skills/tree/b0401f07213a66414d84a65cb50c1d226f99485a/skills/.curated/hatch-pet) for the canonical spec.
@@ -64,7 +64,7 @@ When the upstream hatch-pet contract changes (cells, grid, manifest fields), thi
 ## Repo layout
 
 ```
-agent-pets/
+sido-pets/
 ├── README.md
 ├── .gitignore
 ├── docs/
