@@ -30,15 +30,17 @@ The pet loader resolves `${CODEX_HOME:-$HOME/.codex}/pets/` — see the [hatch-p
 | ID           | Display name   | Size  | States                                                    |
 | ------------ | -------------- | ----- | --------------------------------------------------------- |
 | `brick-lion` | Brick Lion     | 2.9 MB | idle, running-right/left, waving, jumping, failed, waiting, running, review |
-| `meimei`     | Meimei 莓莓     | 2.4 MB | same 11-row atlas as above                                |
+| `meimei`     | Meimei 莓莓     | 2.4 MB | same 9-row atlas as above                                 |
 
 Each pet is one self-contained directory:
 
 ```
 pets/<id>/
-├── pet.json          ← manifest (id, displayName, description, spriteVersionNumber, spritesheetPath)
-└── spritesheet.webp  ← 8 cols × 11 rows, 1536×2288, 192×208 per cell, transparent
+├── pet.json          ← manifest (id, displayName, description, spritesheetPath)
+└── spritesheet.webp  ← 8 cols × 9 rows, 1536×1872, 192×208 per cell, transparent
 ```
+
+⚠️ Both checked-in sheets are currently **1536 × 2288** (2 extra rows) and carry a non-standard `spriteVersionNumber` field. See [docs/sprite-contract.md](docs/sprite-contract.md#deviation-checked-in-sheets-are-11-rows).
 
 Full sprite contract: [`docs/sprite-contract.md`](docs/sprite-contract.md).
 
@@ -57,7 +59,7 @@ Full sprite contract: [`docs/sprite-contract.md`](docs/sprite-contract.md).
 
 When the upstream hatch-pet contract changes (cells, grid, manifest fields), this README's pinned link becomes stale — update the SHA then.
 
-> ⚠️ **Currently stale.** Pinned `b0401f07` documents a 9-row / `1536 × 1872` atlas; the sheets in `pets/` are 11 rows / `1536 × 2288` with a `spriteVersionNumber` manifest field. Re-pin against upstream and confirm the row-9/10 state names.
+> Pinned `b0401f07` is current: both `references/codex-pet-contract.md` and `references/animation-rows.md` are byte-identical to upstream `main` (`49f948f`). Verified 2026-10-02.
 
 ## Repo layout
 
